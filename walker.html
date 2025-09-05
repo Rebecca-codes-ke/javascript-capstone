@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Walker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-indigo-600 min-h-screen flex items-center justify-center text-gray-800">
+
+  <nav class="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="text-xl font-bold text-blue-600">🐾 PetWalk</a>
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+          <a href="walker.html" class="text-gray-700 hover:text-blue-600 font-medium">Find a Walker</a>
+          <a href="services.html" class="text-gray-700 hover:text-blue-600 font-medium">Offer Services</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="walkingForm" class="w-full max-w-lg bg-white rounded-2xl shadow-lg p-6 md:p-8 mt-24">
+    <div class="flex justify-between items-center border-b pb-3 mb-6">
+      <h2 class="text-2xl font-bold text-blue-600">Request a Walk</h2>
+    </div>
+
+    <form id="walkForm" class="space-y-4">
+      <div>
+        <label for="petName" class="block text-sm font-medium mb-1">Pet Name</label>
+        <input type="text" id="petName" required class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="petType" class="block text-sm font-medium mb-1">Pet Type</label>
+        <select id="petType" required class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+          <option value="">Select pet type</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="duration" class="block text-sm font-medium mb-1">Walk Duration</label>
+        <select id="duration" required class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+          <option value="">Select duration</option>
+          <option value="30">30 minutes - Ksh. 500</option>
+          <option value="60">1 hour - Ksh. 1000</option>
+          <option value="90">1.5 hours - Ksh. 1500</option>
+        </select>
+      </div>
+      <div>
+        <label for="walkDate" class="block text-sm font-medium mb-1">Preferred Date</label>
+        <input type="date" id="walkDate" required class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="walkTime" class="block text-sm font-medium mb-1">Preferred Time</label>
+        <select id="walkTime" required class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+          <option value="">Select time</option>
+          <option value="morning">Morning (7-11 AM)</option>
+          <option value="afternoon">Afternoon (12-4 PM)</option>
+          <option value="evening">Evening (5-8 PM)</option>
+        </select>
+      </div>
+      <div>
+        <label for="address" class="block text-sm font-medium mb-1">Your Address</label>
+        <textarea id="address" rows="3" required class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+      <div>
+        <label for="phone" class="block text-sm font-medium mb-1">Contact Phone</label>
+        <input type="tel" id="phone" required placeholder="+2547..." class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="instructions" class="block text-sm font-medium mb-1">Special Instructions</label>
+        <textarea id="instructions" rows="3" class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+
+      <div class="flex justify-end gap-3 pt-4 border-t">
+        <button type="reset" class="px-5 py-2 rounded-full border border-gray-400 text-gray-600 hover:bg-gray-100">Cancel</button>
+        <button type="submit" class="px-5 py-2 rounded-full bg-blue-600 text-white font-semibold shadow hover:bg-blue-700">Request Walk</button>
+      </div>
+      <div id="walkerResult" class="mt-4 text-center font-medium"></div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

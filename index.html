@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Walking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <nav class="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="text-xl font-bold text-blue-600">🐾 PetWalk</a>
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+          <a href="walker.html" class="text-gray-700 hover:text-blue-600 font-medium">Find a Walker</a>
+          <a href="services.html" class="text-gray-700 hover:text-blue-600 font-medium">Offer Services</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero bg-gradient-to-r from-blue-500 to-indigo-600 text-white min-h-screen flex items-center justify-center relative pt-20">
+    <div id="hero-content" class="max-w-3xl mx-auto text-center px-6 opacity-0 transform -translate-y-20 transition-all duration-1000 ease-out">
+      <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Pet Walking" class="mx-auto w-32 h-32 mb-6 animate-bounce">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Professional Pet Walking</h1>
+      <p class="text-lg md:text-xl mb-8 leading-relaxed">
+        Reliable and caring pet walking services for your furry friends in Nairobi. Daily walks, exercise, and companionship while you're away.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a id="walkerBtn" href="walker.html" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-100 transition">Find a Walker</a>
+        <a id="offerBtn" href="services.html" class="bg-transparent border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition">Offer Services</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
